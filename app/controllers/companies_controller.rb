@@ -24,13 +24,22 @@ class CompaniesController < ApplicationController
   def edit
   end
 
+  def destroy
+    if @company.destroy
+      redirect_to companies_path, notice: 'Company has been deleted'
+    else
+      redirect_to company_path, notice:'error deleting company'
+      render :show
+    end
+   end
+
   def update
     if @company.update(company_params)
       redirect_to companies_path, notice: "Changes Saved"
     else
       render :edit
     end
-  end  
+  end
 
   private
 
