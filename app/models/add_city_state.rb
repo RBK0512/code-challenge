@@ -1,0 +1,2 @@
+class AddCityState < ApplicationRecord
+end

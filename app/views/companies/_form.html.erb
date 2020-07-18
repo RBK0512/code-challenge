@@ -19,7 +19,9 @@
       </div>
       <div class="col-lg offset-lg-1">
         <div class="form-group">
-          <%= f.text_field :zip_code, class: "form-control", placeholder: "93003", required: true %>
+          <%= f.text_field :zip_code, class: "form-control", placeholder: "93003",
+                           title: 'Enter a valid zipcode',
+                           required: true %>
         </div>
       </div>
     </div>
@@ -55,7 +57,7 @@
         <div class="form-group">
           <%= f.text_field :email, class: "form-control", placeholder: "youremail@getmainstreet.com",
                            pattern: "^[A-Za-z0-9._%+-]+@getmainstreet.com$",
-                           title: 'only @mainstreet.com related emails are allowed'%>
+                           title: 'only @getmainstreet.com related emails are allowed'%>
         </div>
       </div>
     </div>
